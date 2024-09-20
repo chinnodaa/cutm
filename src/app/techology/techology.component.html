@@ -1,0 +1,12 @@
+<section class="course-categories">
+    <h2 class="animate">BTech Technologies Courses</h2>
+    <div class="categories-grid">
+      <div class="category-card" *ngFor="let course of courses" [routerLink]="course.link">
+        <img [src]="course.image" alt="{{ course.name }}">
+        <div class="category-content">
+          <h3>{{ course.name }}</h3>
+          <p>{{ course.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>

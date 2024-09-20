@@ -27,7 +27,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
             ],
             "scripts": []
           },
@@ -81,13 +83,17 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "public",
+                "src": "assets", 
+                "src":"favicon.ico"
               }
+              
             ],
             "styles": [
               "src/styles.css"
             ],
             "scripts": []
+            
           }
         }
       }

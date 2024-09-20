@@ -1,0 +1,14 @@
+<section class="course-categories">
+    <img src="assets/banners/suresh.jpg" alt="Banner Image" class="section-image">
+    <h2 class="animate">Explore Course Categories</h2>
+   
+    <div class="categories-grid">
+        <a *ngFor="let category of categories" class="category-card" [routerLink]="category.link">
+        <img [src]="category.image" alt="{{ category.name }}">
+        <h3>{{ category.name }}</h3>
+        <p>{{ category.description }}</p>
+        </a>
+    </div>
+  </section>
+  
+  

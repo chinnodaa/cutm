@@ -1,0 +1,303 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #2a99a5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for the whole section */
+.ai-course-registration {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Course Header */
+.course-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.course-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.course-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns the button to the right */
+  margin-top: 20px; 
+  width: 100%; /* Make sure it takes full width */
+}
+
+/* Button Style */
+.register-btn {
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #45a049; /* Change color on hover */
+}
+/* Form container */
+.registration-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #2a99a5;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+/* Form Style */
+form {
+  flex: 100%;
+  margin-right: 20px;
+}
+
+form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+form button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+/* Error messages */
+.text-danger {
+  color: #dc3545;
+  font-size: 0.875rem;
+}
+
+/* Image container styling, taking 30% of the width */
+.form-image {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* For responsive design */
+@media (max-width: 768px) {
+  .form-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .form-image {
+    width: 100%;
+  }
+}
+
+/* Related Courses */
+.related-courses {
+  margin-top: 50px;
+}
+
+.related-courses h3 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.course-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.course-card h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.course-card a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.course-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+  /* Related Courses Section */
+.related-courses {
+  background-color:#2a99a5; /* Light background for contrast */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+/* Title Styling */
+.related-courses h3 {
+  font-size: 2rem;
+  color: #333; /* Dark text color */
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+* Apply the animation to the heading *
+  .related-courses h3 {
+    animation: slideIn 1s ease-out;
+  }
+  .test-animation {
+    padding: 40px;
+    background-color: #f5f5f5;
+  }
+  
+  .animate {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+
+
+/* Course Card Styles */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:white; /* White background for cards */
+  padding: 20px;
+  margin: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease; /* Hover effect */
+}
+
+.course-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Course Card Image */
+.course-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Course Name */
+.course-card h4 {
+  font-size: 1.2rem;
+  color: #007BFF; /* Link color */
+  margin: 10px 0;
+}
+
+/* Course Description */
+.course-card p {
+  font-size: 0.95rem;
+  color: #666; /* Grey text for description */
+  margin: 10px 0;
+}
+
+/* Learn More Link */
+.course-card a {
+  color: #007BFF; /* Link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.course-card a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+

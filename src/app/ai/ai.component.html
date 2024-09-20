@@ -1,0 +1,133 @@
+<section class="ai-course-registration">
+  <!-- AI Course Header Section -->
+  <div class="course-header">
+    <h1>Artificial Intelligence Course</h1>
+    <p>Learn the fundamentals and advanced concepts of AI, Machine Learning, and Deep Learning.</p>
+    <button class="register-btn" (click)="toggleForm()">Course Register Here</button>
+  
+  </div>
+  
+  <!-- Container for form and image -->
+  <div class="form-container" *ngIf="showForm">
+    <!-- Registration Form -->
+    <div class="registration-form">
+      <h1>Course Registration</h1>
+      
+      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+        <!-- First Name Field -->
+        <div>
+          <label for="firstName">First Name:</label>
+          <input id="firstName" formControlName="firstName" />
+          <div *ngIf="submitted && registrationForm.controls['firstName'].invalid && registrationForm.controls['firstName'].touched">
+            <small class="text-danger" *ngIf="registrationForm.controls['firstName'].errors?.['required']">First Name is required</small>
+          </div>
+        </div>
+
+        <!-- Last Name Field -->
+        <div>
+          <label for="lastName">Last Name:</label>
+          <input id="lastName" formControlName="lastName" />
+          <div *ngIf="submitted && registrationForm.controls['lastName'].invalid && registrationForm.controls['lastName'].touched">
+            <small class="text-danger" *ngIf="registrationForm.controls['lastName'].errors?.['required']">Last Name is required</small>
+          </div>
+        </div>
+
+        <!-- Email Field -->
+        <div>
+          <label for="email">Email:</label>
+          <input id="email" formControlName="email" />
+          <div *ngIf="submitted && registrationForm.controls['email'].invalid && registrationForm.controls['email'].touched">
+            <small class="text-danger" *ngIf="registrationForm.controls['email'].errors?.['required']">Email is required</small>
+            <small class="text-danger" *ngIf="registrationForm.controls['email'].errors?.['email']">Invalid email address</small>
+          </div>
+        </div>
+
+        <!-- Phone Number Field -->
+        <div>
+          <label for="phone">Phone Number:</label>
+          <input id="phone" formControlName="phone" />
+          <div *ngIf="submitted && registrationForm.controls['phone'].invalid && registrationForm.controls['phone'].touched">
+            <small class="text-danger" *ngIf="registrationForm.controls['phone'].errors?.['required']">Phone number is required</small>
+          </div>
+        </div>
+
+        <!-- Gender Field -->
+        <div>
+          <label for="gender">Gender:</label>
+          <select id="gender" formControlName="gender">
+            <option value="" disabled>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <!-- Age Field -->
+        <div>
+          <label for="age">Age:</label>
+          <input id="age" type="number" formControlName="age" />
+        </div>
+
+        <!-- Current Studying Year Field -->
+        <div>
+          <label for="studyingYear">Current Studying Year:</label>
+          <input id="studyingYear" formControlName="studyingYear" />
+        </div>
+
+        <!-- Course Field -->
+        <div>
+          <label for="course">Course:</label>
+          <select id="course" formControlName="course">
+            <option value="" disabled>Select Course</option>
+            <option value="AI">Artificial Intelligence</option>
+            <option value="ML">Machine Learning</option>
+            <option value="DL">Deep Learning</option>
+            <option value="DS">Data Science</option>
+          </select>
+        </div>
+
+        <!-- Level Field -->
+        <div>
+          <label for="level">Level:</label>
+          <select id="level" formControlName="level">
+            <option value="" disabled>Select Level</option>
+            <option value="Freshman">Freshman</option>
+            <option value="Sophomore">Sophomore</option>
+            <option value="Junior">Junior</option>
+            <option value="Senior">Senior</option>
+          </select>
+        </div>
+
+        <!-- Interest Courses Field -->
+        <div>
+          <label for="interestCourses">Interested Courses:</label>
+          <select id="interestCourses" formControlName="interestCourses" multiple>
+           
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="C++">C++</option>
+            <option value="SQL">SQL</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+    
+  
+
+
+  <div class="related-courses">
+    <h3 class="animate">Related Courses</h3>
+    <div *ngFor="let course of relatedCourses; let i = index" class="course-card" [ngStyle]="{'background-color': getCourseColor(i)}">
+      <img [src]="course.image" alt="{{ course.name }}" />
+      <h4>{{ course.name }}</h4>
+      <p>{{ course.description }}</p>
+      <a [routerLink]="course.link">Learn More</a>
+    </div>
+  </div>
+
+</section>
