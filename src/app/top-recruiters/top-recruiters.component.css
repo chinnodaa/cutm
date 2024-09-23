@@ -1,0 +1,73 @@
+.top-recruiters {
+    background-color: #f4f4f4; /* Light background */
+    border: 1px solid #ddd; /* Border around the section */
+    padding: 20px; /* Spacing inside the section */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Spacing above and below */
+    text-align: center; /* Center text */
+}
+
+.top-recruiters h3 {
+    color: #333; /* Heading color */
+    font-size: 1.8rem; /* Larger heading */
+    margin-bottom: 20px; /* Spacing below heading */
+}
+
+.top-recruiters ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto the next line */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.top-recruiters li {
+    display: flex; /* Use flexbox for each item */
+    flex-direction: column; /* Stack image and text vertically */
+    margin: 10px; /* Spacing between items */
+    text-align: center;
+}
+
+.top-recruiters img {
+    width: 80px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Spacing below image */
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+.top-recruiters img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.top-recruiters span {
+    font-size: 1.1rem; /* Adjust font size */
+    color: #555; /* Dark gray text */
+}
+
+/* Apply the animation to the heading */
+.top-recruiters h2 {
+    animation: slideIn 1s ease-out;
+  }
+  .test-animation {
+    padding: 40px;
+    background-color: #f5f5f5;
+  }
+  
+  .animate {
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }

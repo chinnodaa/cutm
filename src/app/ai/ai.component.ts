@@ -17,9 +17,9 @@ export class AiComponent {
   relatedCourses = [
     { name: 'Advanced AI', description: 'Deep dive into AI technologies.', link: '/advanced-ai', image: 'assets/banners/advances.png' },
     { name: 'Machine Learning', description: 'Learn various ML algorithms.', link: '/machine-learning', image: 'assets/banners/machine.jpg' },
-    { name: 'Data Management', description: 'Explore data analysis techniques.', link: '/data-science', image: 'assets/banners/manage.webp' },
-    { name: 'NLP', description: 'Explore data analysis techniques.', link: '/data-science', image: 'assets/banners/nlp.webp' },
-    { name: 'Deep Learning', description: 'Explore data analysis techniques.', link: '/data-science', image: 'assets/banners/deep.jpg' },
+    { name: 'Data Management', description: 'Explore data analysis techniques.', link: '/data-management', image: 'assets/banners/manage.webp' },
+    { name: 'NLP', description: 'Explore data analysis techniques.', link: '/nlp', image: 'assets/banners/nlp.webp' },
+    { name: 'Deep Learning', description: 'Explore data analysis techniques.', link: '/deep-learning ', image: 'assets/banners/deep.jpg' },
   ];
   colors: string[] = ['#FF5733', '#33FF57', '#fd5c63', '#F3FF33', '#FF33F6'];
 

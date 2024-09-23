@@ -1,0 +1,96 @@
+<section class="advanced-ai-course">
+    <!-- Course Header Section -->
+    <div class="course-header">
+      <h2>Advanced AI Course</h2>
+      <p>Master advanced AI concepts, algorithms, and applications in real-world scenarios.</p>
+    </div>
+  
+<!-- Syllabus Section -->
+<div class="course-syllabus">
+    <h3>Course Syllabus</h3>
+    <ul>
+      <li *ngFor="let syllabusItem of syllabus; let i = index" (click)="toggleSection(i)">
+        {{ syllabusItem.title }}
+        <span *ngIf="activeSection === i">▼</span>
+        <span *ngIf="activeSection !== i">▶</span>
+  
+        <!-- Show description based on active section -->
+        <div *ngIf="activeSection === i" class="slide-content">
+          <p>{{ syllabusItem.description }}</p> <!-- Use syllabusItem here -->
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="course-videos">
+    <h3>Video Lectures</h3>
+    <ul>
+      <li *ngFor="let video of videos; let i = index">
+        <a (click)="toggleVideo(i)" class="video-button">{{ video.title }}</a>
+        <div *ngIf="activeVideo === i" class="slide-content">
+          <p>{{ video.description }}</p>
+          <div class="button-container">
+            <button (click)="showClassDetails(i)" class="watch-button">Watch Now</button>
+            <button (click)="uploadClass(video.title)" class="upload-button">Upload Class</button>
+          </div>
+          <div *ngIf="activeClassDetails === i" class="class-details">
+            <h4>Subclasses:</h4>
+            <ul>
+              <li *ngFor="let subClass of video.subClasses">{{ subClass }}</li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  
+  
+  
+<!-- Assignments Section -->
+<div class="course-assignments">
+  <h3>Assignments</h3>
+  <ul>
+    <li>
+      <a [routerLink]="['/assignments', 'assignment-1']">Assignment 1</a>
+      <button [routerLink]="['/tests', 'test-1']" class="take-test-button">Take Test</button>
+    </li>
+    <li>
+      <a [routerLink]="['/assignments', 'assignment-2']">Assignment 2</a>
+      <button [routerLink]="['/tests', 'test-2']" class="take-test-button">Take Test</button>
+    </li>
+    <li>
+      <a [routerLink]="['/assignments', 'assignment-3']">Assignment 3</a>
+      <button [routerLink]="['/tests', 'test-3']" class="take-test-button">Take Test</button>
+    </li>
+  </ul>
+</div>
+
+  
+  <!-- Test Section -->
+<div class="course-tests">
+    <h3>Tests</h3>
+    <ul>
+      <li>
+        <a [routerLink]="['/tests', 'midterm']">Midterm Test</a>
+        <button [routerLink]="['/tests', 'midterm']" class="take-test-button">Take Test</button>
+      </li>
+      <li>
+        <a [routerLink]="['/tests', 'final']">Final Test</a>
+        <button [routerLink]="['/tests', 'final']" class="take-test-button">Take Test</button>
+      </li>
+    </ul>
+  </div>
+  
+  
+    <!-- Zoom Class Section -->
+    <div class="zoom-classes">
+      <h3>Live Zoom Classes</h3>
+      <p>Join our live interactive Zoom classes for direct engagement with instructors and classmates.</p>
+      <ul>
+        <li><a href="https://zoom.us/j/1234567890" target="_blank">Zoom Class: AI Ethics Discussion</a></li>
+        <li><a href="https://zoom.us/j/0987654321" target="_blank">Zoom Class: AI Capstone Review</a></li>
+      </ul>
+    </div>
+  
+  </section>
+  

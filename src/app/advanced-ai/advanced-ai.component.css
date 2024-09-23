@@ -1,0 +1,317 @@
+.advanced-ai-course {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .course-header h2 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+  }
+  
+  .course-header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .course-syllabus ul,
+  .course-videos ul,
+  .course-assignments ul,
+  .course-tests ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .course-syllabus ul li,
+  .course-videos ul li,
+  .course-assignments ul li,
+  .course-tests ul li {
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .course-syllabus ul li:hover,
+  .course-videos ul li:hover,
+  .course-assignments ul li:hover,
+  .course-tests ul li:hover {
+    background-color: #bbdefb;
+  }
+  
+  .course-syllabus h3,
+  .course-videos h3,
+  .course-assignments h3,
+  .course-tests h3,
+  .zoom-classes h3 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  /* Syllabus Section Styles */
+.course-syllabus {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .course-syllabus h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .course-syllabus ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .course-syllabus li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .course-syllabus li:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .course-syllabus li:last-child {
+    border-bottom: none; /* Remove border from last item */
+  }
+  
+  .slide-content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-left: 3px solid #4CAF50; /* Green left border */
+    border-radius: 5px;
+  }
+  
+  .slide-content p {
+    margin: 0;
+    color: #555;
+  }
+  .course-videos {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-videos h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .course-videos ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .course-videos li {
+    margin-bottom: 15px;
+  }
+  
+  .video-button {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .slide-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align items to the sides */
+    align-items: center; /* Center items vertically */
+    margin-top: 10px; /* Space above slide content */
+    border: 1px solid #ddd; /* Optional: border for slide content */
+    padding: 10px; /* Padding inside slide content */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .watch-button,
+  .upload-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between buttons */
+    transition: background-color 0.3s;
+  }
+  
+  .watch-button:hover,
+  .upload-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .class-details {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0; /* Light background */
+    border: 1px solid #ddd; /* Border */
+    border-radius: 5px; /* Rounded corners */
+  }
+  .slide-content {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    overflow: hidden;
+  }
+  
+  .class-details {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  }
+  
+  .class-details.slide-down {
+    max-height: 200px; /* Adjust based on your content */
+    opacity: 1;
+  }
+  .course-videos {
+    margin: 20px;
+  }
+  
+  .video-button {
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  
+  .class-details {
+    margin-top: 10px;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  
+
+  .course-assignments {
+  margin: 20px;
+}
+
+.course-assignments ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove default padding */
+}
+
+.course-assignments li {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between link and button */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 10px; /* Spacing between items */
+}
+
+.take-test-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007BFF; /* Button color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.take-test-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+
+
+.course-tests {
+    margin: 20px;
+  }
+  
+  .course-tests ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .course-tests li {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between link and button */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Spacing between items */
+  }
+  
+  .take-test-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007BFF; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .take-test-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+
+  
+  
+  
+  .zoom-classes {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Border around the section */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the section */
+    margin: 20px 0; /* Spacing above and below */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .zoom-classes h3 {
+    color: #4CAF50; /* Green color for the heading */
+    font-size: 1.5rem; /* Larger font size for emphasis */
+    margin-bottom: 10px; /* Spacing below the heading */
+  }
+  
+  .zoom-classes p {
+    font-size: 1rem; /* Regular font size */
+    color: #555; /* Dark gray for readability */
+    margin-bottom: 15px; /* Spacing below the paragraph */
+  }
+  
+  .zoom-classes ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .zoom-classes li {
+    margin-bottom: 10px; /* Spacing between list items */
+  }
+  
+  .zoom-classes a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007BFF; /* Link color */
+    padding: 10px 15px; /* Padding for links */
+    border: 1px solid #007BFF; /* Border matching link color */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+  }
+  
+  .zoom-classes a:hover {
+    background-color: #007BFF; /* Background color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+  

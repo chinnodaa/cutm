@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,6 +26,17 @@ import { CnComponent } from './cn/cn.component';
 import { BioComponent } from './bio/bio.component';
 import { EceComponent } from './ece/ece.component';
 import { MechanicalComponent } from './mechanical/mechanical.component';
+import { AdvancedAiComponent } from './advanced-ai/advanced-ai.component';
+import { NLPComponent } from './nlp/nlp.component';
+import { DataManagementComponent } from './data-management/data-management.component';
+import { MachineLearningComponent } from './machine-learning/machine-learning.component';
+import { DeepLearningComponent } from './deep-learning/deep-learning.component';
+import { VedioComponent } from './vedio/vedio.component';
+import { AssignmentComponent } from './assignment/assignment.component';
+import { MidtremTestComponent } from './midtrem-test/midtrem-test.component';
+import { FinalTestComponent } from './final-test/final-test.component';
+import { TopRecruitersComponent } from './top-recruiters/top-recruiters.component';
+import { AboutPaltformComponent } from './about-paltform/about-paltform.component';
 
 
 
@@ -52,15 +63,27 @@ export const routes: Routes = [
     { path: 'bio', component: BioComponent },
     { path: 'ece', component: EceComponent},
     { path: 'mechanical', component: MechanicalComponent },
-    { path: '**', redirectTo: '/Home' } 
+    { path: 'advanced-ai', component: AdvancedAiComponent },
+    { path: 'nlp', component: NLPComponent },
+    { path: 'data-management', component: DataManagementComponent},
+    { path: 'machine-learning', component: MachineLearningComponent},
+    { path: 'deep-learning', component: DeepLearningComponent},
+    { path: '**', redirectTo: '/Home' },
+    { path: 'videos', component: VedioComponent },
+    { path: 'assignments/assignment', component: AssignmentComponent },
+    { path: 'tests/midterm', component: MidtremTestComponent },
+    { path: 'tests/final', component: FinalTestComponent },
+    { path: 'top', component: TopRecruitersComponent },
+    { path: 'about-platform', component: AboutPaltformComponent },
    
 
 ];
 
 @NgModule({
-    
+   
     imports: [RouterModule.forRoot(routes),CommonModule,BrowserModule, ReactiveFormsModule],
     exports: [RouterModule],
+  
    
     
   })
