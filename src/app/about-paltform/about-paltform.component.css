@@ -1,62 +1,64 @@
 .about-platform {
-    background-color: #f9f9f9; /* Light background */
-    border: 1px solid #ddd; /* Border around the section */
-    padding: 20px; /* Spacing inside the section */
-    border-radius: 8px; /* Rounded corners */
-    margin: 20px 0; /* Spacing above and below */
-    text-align: center; /* Center text */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px; /* Limits the content width */
 }
 
 .about-platform h2 {
-    color: #333; /* Heading color */
-    font-size: 2rem; /* Larger heading */
-    margin-bottom: 20px; /* Spacing below heading */
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.about-content {
-    display: flex; /* Flexbox for layout */
-    flex-direction: row; /* Horizontal layout */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center items vertically */
+/* Section layout for text and images */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
+.about-section.reverse {
+    flex-direction: row-reverse; /* Flips the layout for second section */
+}
+
+/* Images styling */
+.about-image {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+.image {
+    width: 250px; /* Medium image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Text styling */
 .about-text {
-    flex: 1; /* Take remaining space */
-    padding-right: 20px; /* Spacing between text and images */
+    flex: 1;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: left;
+    line-height: 1.6;
 }
 
-.about-text p {
-    color: #555; /* Text color */
-    font-size: 1.1rem; /* Adjust font size */
-    line-height: 1.5; /* Improve readability */
+/* Align text opposite to the image for right side alignment */
+.about-section.reverse .about-text {
+    text-align: left;
 }
 
-.about-images {
-    flex: 1; /* Take remaining space */
-}
-
-.about-images .image {
-    width: 80px; /* Smaller image size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 10px; /* Spacing between images */
-    cursor: pointer; /* Pointer cursor for clickable images */
-    transition: transform 0.3s ease; /* Hover effect */
-}
-
-.about-images .image:hover {
-    transform: scale(1.1); /* Zoom on hover */
-}
-
-.slide-content {
-    margin-top: 10px; /* Spacing above slide content */
-    font-size: 0.9rem; /* Adjust font size */
-    color: #777; /* Slightly darker text for description */
-    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth slide down effect */
-    overflow: hidden; /* Hide overflow for animation */
-    max-height: 100px; /* Adjust as necessary */
-}
 
 
 /* Apply the animation to the heading */

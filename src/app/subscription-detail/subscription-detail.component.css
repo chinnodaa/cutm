@@ -1,0 +1,107 @@
+/* Container for subscription details */
+.subscription-details-container {
+    max-width: 800px; /* Maximum width for the container */
+    margin: auto; /* Center the container */
+    padding: 30px; /* Padding around the container */
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center align text */
+    animation: fadeIn 0.5s ease; /* Fade-in animation */
+}
+
+/* Title for subscription details */
+.subscription-details-title {
+    font-size: 2.5rem; /* Large font size */
+    margin-bottom: 20px; /* Margin below title */
+    color: #0056b3; /* Dark blue color */
+}
+
+/* Highlight for subscription type */
+.highlight {
+    font-weight: bold; /* Bold text */
+    color: #ff5722; /* Bright orange color */
+}
+
+/* Text for subscription details */
+.subscription-details-text {
+    font-size: 1.2rem; /* Font size for details */
+    color: #666; /* Grey color */
+    margin: 15px 0; /* Margin around the text */
+}
+
+/* Features list */
+.features-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Left align text */
+    margin: 20px 0; /* Margin around the list */
+}
+
+/* List item styles with animations */
+.features-list li {
+    margin: 10px 0; /* Margin between list items */
+    position: relative; /* Position for pseudo-element */
+    padding-left: 25px; /* Padding for bullet effect */
+    animation: fadeInUp 0.5s ease; /* Fade-in up animation */
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Start slightly lower */
+    animation-fill-mode: forwards; /* Keep end state after animation */
+}
+
+/* Custom bullet points */
+.features-list li:before {
+    content: "✔"; /* Checkmark for bullet */
+    color: #4caf50; /* Green color for checkmark */
+    position: absolute; /* Absolute position */
+    left: 0; /* Align bullet to the left */
+}
+
+/* Button styling */
+.action-button {
+    background-color: #0056b3; /* Dark blue color */
+    color: white; /* White text */
+    padding: 12px 25px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 1.1rem; /* Font size for button */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button */
+    margin-top: 20px; /* Margin above the button */
+}
+
+/* Hover effects for action button */
+.action-button:hover {
+    background-color: #004494; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(-10px); /* Slide down effect */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Fade-in up animation for list items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Slide up effect */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Delay for each list item */
+.features-list li:nth-child(1) { animation-delay: 0.1s; }
+.features-list li:nth-child(2) { animation-delay: 0.2s; }
+.features-list li:nth-child(3) { animation-delay: 0.3s; }
+.features-list li:nth-child(4) { animation-delay: 0.4s; }

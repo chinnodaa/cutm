@@ -96,3 +96,41 @@ header {
 
 } 
 
+
+
+.profile-icon {
+    cursor: pointer; /* Change cursor on profile icon */
+  }
+  
+  .profile-image {
+    width: 40px; /* Profile image size */
+    height: 40px; /* Profile image size */
+    border-radius: 50%; /* Round profile image */
+  }
+  
+  .profile-dropdown {
+    position: absolute;
+    top: 70px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: white; /* Dropdown background */
+    border: 1px solid #ddd; /* Dropdown border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Dropdown shadow */
+    z-index: 1000; /* Dropdown above other elements */
+  }
+  
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  .dropdown-content a {
+    padding: 10px;
+    text-decoration: none; /* Remove underline */
+    color: #007bff; /* Link color */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Link hover effect */
+  }

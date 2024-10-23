@@ -1,0 +1,72 @@
+.course-plans {
+    display: flex;
+    justify-content: space-between; /* Spread the boxes horizontally */
+    max-width: 1200px; /* Max width for the container */
+    margin: 40px auto; /* Center the course plans */
+    padding: 20px;
+    background-color: #1a1a1a; /* Industrial dark background */
+    border-radius: 10px;
+}
+.course-plans-title {
+    text-align: center; /* Center the heading */
+    color: #f39c12; /* Industrial orange color */
+    font-size: 2rem; /* Adjust the font size */
+    margin-bottom: 20px; /* Space between the heading and the course plans */
+    margin-top: 0; /* Adjust top margin if necessary */
+    padding-top: 20px; /* Optional padding for space from the top of the page */
+}
+
+
+.course {
+    flex: 1; /* Allow boxes to have equal width */
+    background-color: #2c2c2c; /* Dark background for each box */
+    color: #f1f1f1; /* Light text color for contrast */
+    border: 1px solid #333; /* Border for the boxes */
+    padding: 20px;
+    margin: 10px; /* Space between the boxes */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.course:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+}
+
+.course h3 {
+    color: #f39c12; /* Bold industrial orange for titles */
+}
+
+.duration, .level {
+    color: #bbbbbb; /* Subtle text color */
+}
+
+.objectives {
+    margin: 15px 0;
+}
+
+.enroll-button {
+    background-color: #f39c12; /* Button background with industrial orange */
+    color: #1a1a1a; /* Dark text color */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.enroll-button:hover {
+    background-color: #e67e22; /* Slightly darker orange on hover */
+}
+
+@media (max-width: 768px) {
+    .course-plans {
+        flex-direction: column; /* Stack boxes vertically on smaller screens */
+    }
+
+    .course {
+        margin: 20px 0; /* Add space between vertically stacked boxes */
+    }
+}

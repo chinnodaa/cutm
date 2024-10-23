@@ -1,0 +1,112 @@
+.faq-section {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h3 {
+    color: #2c3e50;
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.faq-header {
+    display: flex;
+    align-items: center;
+}
+
+.faq-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.faq-question {
+    background-color: transparent;
+    border: none;
+    color: #2980b9;
+    font-size: 1.4rem;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: left;
+    transition: color 0.3s ease;
+    outline: none;
+    flex-grow: 1;
+    padding: 0;
+}
+
+.faq-question:hover {
+    color: #e74c3c;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin: 15px 0;
+}
+
+.faq-answer img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 400px; /* Adjust based on content size */
+    opacity: 1;
+    padding: 15px;
+}
+
+.faq-icon:hover {
+    transform: scale(1.2); /* Icon zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+    .faq-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .faq-icon {
+        margin-bottom: 10px;
+    }
+
+    .faq-answer img {
+        margin: 0 auto;
+    }
+}
+
+
+
+
+.faq-answer {
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(-20px); /* Slide up effect */
+}
+
+.faq-item.active .faq-answer {
+    transform: translateY(0); /* Reset the position */
+    opacity: 1;
+}

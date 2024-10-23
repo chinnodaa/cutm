@@ -3,62 +3,57 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule],
+  imports: [ReactiveFormsModule,CommonModule ,RouterModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
-export class SignupComponent{
-  signupForm!: FormGroup;
-  submitted = false;
+export class SignupComponent implements OnInit{
+  signupForm: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
-    this.signupForm = this.formBuilder.group({
-      name: ['', Validators.required],
+  constructor(private fb: FormBuilder, private router: Router) {
+    // Initialize the form group
+    this.signupForm = this.fb.group({
+      username: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
-    }, {
-      validator: this.mustMatch('password', 'confirmPassword')
-    });
+      confirmPassword: ['', Validators.required]
+    }, { validator: this.passwordMatchValidator }); // Validate that passwords match
   }
 
-  mustMatch(password: string, confirmPassword: string) {
-    return (formGroup: FormGroup) => {
-      const passControl = formGroup.controls[password];
-      const confirmPassControl = formGroup.controls[confirmPassword];
-
-      if (confirmPassControl.errors && !confirmPassControl.errors['mustMatch']) {
-        return;
-      }
-
-      if (passControl.value !== confirmPassControl.value) {
-        confirmPassControl.setErrors({ mustMatch: true });
-      } else {
-        confirmPassControl.setErrors(null);
-      }
-    };
+  ngOnInit(): void {
+    // Any additional initialization can go here
   }
 
+  // Password matching validation
+  passwordMatchValidator(form: FormGroup) {
+    return form.get('password')?.value === form.get('confirmPassword')?.value
+      ? null : { mismatch: true };
+  }
+
+  // Function to handle form submission
   onSubmit() {
-    this.submitted = true;
+    if (this.signupForm.valid) {
+      const formData = this.signupForm.value;
+      console.log('Signup Data:', formData);
 
-    if (this.signupForm.invalid) {
-      return;
+      // Handle signup logic here (e.g., API call)
+
+      // Redirect to a success page or dashboard after successful signup
+      // For example, navigate to the login page after signup:
+      this.router.navigate(['/Login']);
+    } else {
+      // Handle form errors
+      console.log('Form is invalid');
     }
-
-    console.log('Form Submitted', this.signupForm.value);
   }
 
-  onReset() {
-    this.submitted = false;
-    this.signupForm.reset();
+  // Function to navigate to login page
+  navigateToLogin() {
+    this.router.navigate(['/Login']);
   }
-     
-
-  
 }

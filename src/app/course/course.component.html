@@ -1,5 +1,66 @@
 <section class="course-categories">
-    <img src="assets/banners/suresh.jpg" alt="Banner Image" class="section-image">
+
+      
+    
+ 
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+    
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <!-- First slide -->
+                <div class="carousel-item active">
+                    <img src="assets/banners/suresh.jpg" alt="Centurion University" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5>Centurion University</h5>
+                        <p>Join our courses and enhance your skills.</p>
+                        <a [routerLink]="['/subscription-plans']" class="btn enroll-button">Subscribe</a>
+                    </div>
+                </div>
+    
+                <!-- Second slide -->
+                <div class="carousel-item">
+                    <img src="assets/banners/Best.jpg" alt="Online Learning" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5>Online Learning</h5>
+                        <p>Learn at your own pace with our expert instructors.</p>
+                        <a routerlink="/courseplans" class="btn enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+    
+                <!-- Third slide -->
+                <div class="carousel-item">
+                    <img src="assets/banners/Best1.jpg" alt="LMS" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h5>Learning Management System</h5>
+                        <p>Access a wide range of courses from anywhere.</p>
+                        <a routerLink="/courseplans" class="btn enroll-button">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    
+
+      
+
+    
     <h2 class="animate">Explore Course Categories</h2>
    
     <div class="categories-grid">

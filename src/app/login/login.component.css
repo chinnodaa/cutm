@@ -107,3 +107,217 @@ form .button input:hover{
 form .signup-link a:hover{
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+/* Fullscreen video background */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure video is behind the content */
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-size: cover;
+}
+
+
+/* Right-hand side section for account creation */
+.right-section {
+  max-width: 400px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.right-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.right-section p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.create-account-btn {
+  padding: 15px;
+  font-size: 18px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-account-btn:hover {
+  background-color: #218838;
+}
+
+/* General layout for the login section */
+.login-section {
+  position: relative;
+  z-index: 1; /* Ensure the login form stays on top of the video */
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Optional: Keep the shadow to create depth */
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white; /* Set all text in the section to white */
+}
+
+/* Circular image styling */
+.login-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+/* Styling for form inputs and buttons */
+.login-form input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent; /* Transparent input background */
+  color: white; /* Input text color white */
+  transition: border-color 0.3s ease;
+}
+
+.login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder text color set to white with transparency */
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-form select {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd; /* Normal border */
+  border-radius: 5px;
+  background-color: transparent; /* Keep the dropdown background transparent */
+  color: white; /* Dropdown text color white */
+  appearance: none; /* Remove default arrow */
+}
+
+/* Remove highlighting effect */
+.login-form select:focus {
+  border-color: #ddd; /* Keep the same border color on focus */
+  outline: none; /* Remove outline on focus */
+}
+
+/* Remove any hover effect */
+.login-form select:hover {
+  border-color: #ddd; /* Keep the same border color on hover */
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #00408a;
+}
+
+/* Responsive design */
+@media screen and (max-width: 480px) {
+  .login-section {
+    padding: 30px;
+    margin: 30px auto;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+}
+
+
+
+.new-account-section {
+  position: fixed; /* Use fixed positioning to place it relative to the viewport */
+  right: 20px; /* Distance from the right edge of the screen */
+  top: 100px; /* Distance from the top edge of the screen */
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 250px; /* Set a max width for the new account section */
+  z-index: 1; /* Ensure it is on top of other elements */
+}
+
+/* Heading and paragraph text styling */
+.new-account-section h3 {
+  margin-bottom: 10px;
+  color: white; /* Change the text color to black */
+}
+
+.new-account-section p {
+  margin-bottom: 15px;
+  color: red; /* Change the text color to black */
+}
+
+/* Button styling */
+.create-account-btn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.create-account-btn:hover {
+  background-color: #218838;
+}

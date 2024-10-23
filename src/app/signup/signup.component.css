@@ -1,184 +1,146 @@
-/* General form styling */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
-  }
-  .form-container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Make sure it takes the full viewport height */
-    padding: 1rem; /* Add some padding if needed */
-    background-color: #f8f9fa; /* Optional background color */
+/* Fullscreen video background */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure video is behind the content */
 }
 
-/* Form styling (unchanged) */
-form {
-    max-width: 600px;
-    margin: 0;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background-size: cover;
 }
-  
-  /* Form outline styling */
-  .form-outline {
-    position: relative;
+
+/* General layout for the signup section */
+.signup-section {
+  position: relative;
+  z-index: 1; /* Ensure the signup form stays on top of the video */
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Optional: Keep the shadow to create depth */
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white; /* Set all text in the section to white */
+}
+
+/* Circular image styling */
+.signup-logo {
+  display: block;
+  margin: 0 auto 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+/* Styling for form inputs and buttons */
+.signup-section input {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent; /* Transparent input background */
+  color: white; /* Input text color white */
+  transition: border-color 0.3s ease;
+}
+
+.signup-section input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder text color set to white with transparency */
+}
+
+.signup-section input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:active {
+  background-color: #00408a;
+}
+
+/* Responsive design */
+@media screen and (max-width: 480px) {
+  .signup-section {
+    padding: 30px;
+    margin: 30px auto;
   }
-  
-  .form-outline .form-control {
-    border-radius: 4px;
-    border: 1px solid #ced4da;
-    padding: 0.75rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+
+  h2 {
+    font-size: 24px;
   }
-  
-  .form-outline .form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+
+  button {
+    font-size: 16px;
   }
-  
-  /* Form labels styling */
-  .form-label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    font-size: 0.875rem;
-    color: #6c757d;
-    pointer-events: none;
-    transform: translateY(-50%);
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .form-control:focus + .form-label,
-  .form-control:not(:placeholder-shown) + .form-label {
-    top: -0.75rem;
-    left: 5px;
-    font-size: 0.75rem;
-    color: #007bff;
-  }
-  
-  /* Error messages styling */
-  .text-danger {
-    color: #dc3545;
-  }
-  
-  small {
-    display: block;
-    margin-top: 0.25rem;
-  }
-  
-  /* Icon styling */
-  i.fas {
-    color: #6c757d;
-  }
-  
-  /* Submit button styling */
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #ffffff;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 4px;
-    transition: background-color 0.3s, border-color 0.3s;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-  }
-  
-  /* Checkbox and label styling */
-  .form-check {
-    margin-bottom: 1.5rem;
-  }
-  
-  .form-check-input {
-    margin-right: 0.5rem;
-  }
-  
-  .form-check-label {
-    font-size: 0.875rem;
-  }
-  
-  /* Form spacing and alignment */
-  .d-flex {
-    display: flex;
-  }
-  
-  .flex-row {
-    flex-direction: row;
-  }
-  
-  .align-items-center {
-    align-items: center;
-  }
-  
-  .mb-4 {
-    margin-bottom: 1.5rem;
-  }
-  
-  .mb-5 {
-    margin-bottom: 2rem;
-  }
-  
-  .mx-1 {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-  
-  .mx-md-4 {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-  }
-  
-  .mb-3 {
-    margin-bottom: 1rem;
-  }
-  
-  .mb-lg-4 {
-    margin-bottom: 2rem;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .btn-lg {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.25rem;
-    border-radius: 0.3rem;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: #ffffff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .mx-md-4 {
-      margin-left: 1rem;
-      margin-right: 1rem;
-    }
-  
-    .btn-lg {
-      font-size: 1rem;
-      padding: 0.5rem 1rem;
-    }
-  }
-  
+}
+
+
+.new-account-section {
+  position: fixed; /* Use fixed positioning to place it relative to the viewport */
+  right: 20px; /* Distance from the right edge of the screen */
+  top: 100px; /* Distance from the top edge of the screen */
+  background-color: rgba(0, 123, 255, 0.1); /* Light blue background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 250px; /* Set a max width for the new account section */
+  z-index: 1; /* Ensure it is on top of other elements */
+}
+
+/* Heading and paragraph text styling */
+.new-account-section h3 {
+  margin-bottom: 10px;
+  color: white; /* Change the text color to black */
+}
+
+.new-account-section p {
+  margin-bottom: 15px;
+  color: red; /* Change the text color to black */
+}
+
+/* Button styling */
+.create-account-btn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.create-account-btn:hover {
+  background-color: #218838;
+}

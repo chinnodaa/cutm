@@ -32,11 +32,16 @@ import { MidtremTestComponent } from './midtrem-test/midtrem-test.component';
 import { FinalTestComponent } from './final-test/final-test.component';
 import { TopRecruitersComponent } from './top-recruiters/top-recruiters.component';
 import { AboutPaltformComponent } from './about-paltform/about-paltform.component';
+import { PopularCoursesComponent } from './popular-courses/popular-courses.component';
+import { FaqComponent } from './faq/faq.component';
+import { CourseplansComponent } from './courseplans/courseplans.component';
+import { SubscriptionPlansComponent } from './subscription-plans/subscription-plans.component';
+import { SubscriptionDetailComponent } from './subscription-detail/subscription-detail.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,NavbarComponent,LoginComponent,SignupComponent,HomeComponent,ProfileComponent,AboutComponent,ServicesComponent,FooterComponent,CourseComponent,TechologyComponent,BusinessComponent,DesignComponent,AiComponent,DataComponent,WebComponent,CyberComponent,CnComponent,BioComponent,EceComponent,MechanicalComponent,AdvancedAiComponent,DeepLearningComponent,NLPComponent,MachineLearningComponent,DataManagementComponent,VedioComponent,AssignmentComponent,MidtremTestComponent,FinalTestComponent,TopRecruitersComponent,AboutPaltformComponent],
+  imports: [RouterOutlet,CommonModule,NavbarComponent,LoginComponent,SignupComponent,HomeComponent,ProfileComponent,AboutComponent,ServicesComponent,FooterComponent,CourseComponent,TechologyComponent,BusinessComponent,DesignComponent,AiComponent,DataComponent,WebComponent,CyberComponent,CnComponent,BioComponent,EceComponent,MechanicalComponent,AdvancedAiComponent,DeepLearningComponent,NLPComponent,MachineLearningComponent,DataManagementComponent,VedioComponent,AssignmentComponent,MidtremTestComponent,FinalTestComponent,TopRecruitersComponent,AboutPaltformComponent,PopularCoursesComponent,FaqComponent,CourseplansComponent,SubscriptionPlansComponent,SubscriptionDetailComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

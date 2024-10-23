@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
+<!--<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,4 +33,75 @@
       </div>
     </div>
   </body>
-</html>
+</html>-->
+
+<div class="video-container">
+  <video autoplay muted loop id="background-video">
+    <source src="assets/banners/loginvedio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+
+
+<section class="login-section">
+  <h2>Login</h2>
+
+  <div class="role-selection">
+    <label for="role">Select Your Role:</label>
+    <select [(ngModel)]="selectedRole" name="role" id="role">
+      <option value="admin">Admin</option>
+      <option value="faculty">Faculty</option>
+      <option value="student">Student</option>
+    </select>
+  </div>
+
+  <!-- Admin Login Form -->
+  <div *ngIf="selectedRole === 'admin'" class="login-form">
+    <img src="assets/banners/admin.png" alt="Admin Logo" class="login-logo">
+    <h3>Admin Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="adminUsername">Username:</label>
+      <input formControlName="username" id="adminUsername" type="text" placeholder="Admin Username" />
+      <label for="adminPassword">Password:</label>
+      <input formControlName="password" id="adminPassword" type="password" placeholder="Admin Password" />
+      <button type="submit">Login as Admin</button>
+    </form>
+  </div>
+
+  <!-- Faculty Login Form -->
+  <div *ngIf="selectedRole === 'faculty'" class="login-form">
+    <img src="assets/banners/faculty.png" alt="Faculty Logo" class="login-logo">
+    <h3>Faculty Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="facultyUsername">Username:</label>
+      <input formControlName="username" id="facultyUsername" type="text" placeholder="Faculty Username" />
+      <label for="facultyPassword">Password:</label>
+      <input formControlName="password" id="facultyPassword" type="password" placeholder="Faculty Password" />
+      <button type="submit">Login as Faculty</button>
+    </form>
+  </div>
+
+  <!-- Student Login Form -->
+  <div *ngIf="selectedRole === 'student'" class="login-form">
+    <img src="assets/banners/student.png" alt="Student Logo" class="login-logo">
+    <h3>Student Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <label for="studentUsername">Username:</label>
+      <input formControlName="username" id="studentUsername" type="text" placeholder="Student Username" />
+      <label for="studentPassword">Password:</label>
+      <input formControlName="password" id="studentPassword" type="password" placeholder="Student Password" />
+      <button type="submit">Login as Student</button>
+    </form>
+  </div>
+
+  
+</section>
+
+<!-- New Account Section Outside the Login Page -->
+<div class="new-account-section">
+  <h3>Centurion university Learning Management System</h3>
+  <p>Don't have an account? Create a new one to get started!</p>
+  <button class="create-account-btn" (click)="navigateToSignUp()">Create a New Account</button>
+</div>

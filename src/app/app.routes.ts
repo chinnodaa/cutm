@@ -37,6 +37,11 @@ import { MidtremTestComponent } from './midtrem-test/midtrem-test.component';
 import { FinalTestComponent } from './final-test/final-test.component';
 import { TopRecruitersComponent } from './top-recruiters/top-recruiters.component';
 import { AboutPaltformComponent } from './about-paltform/about-paltform.component';
+import { PopularCoursesComponent } from './popular-courses/popular-courses.component';
+import { FaqComponent } from './faq/faq.component';
+import { CourseplansComponent } from './courseplans/courseplans.component';
+import { SubscriptionPlansComponent } from './subscription-plans/subscription-plans.component';
+import { SubscriptionDetailComponent } from './subscription-detail/subscription-detail.component';
 
 
 
@@ -75,7 +80,12 @@ export const routes: Routes = [
     { path: 'tests/final', component: FinalTestComponent },
     { path: 'top', component: TopRecruitersComponent },
     { path: 'about-platform', component: AboutPaltformComponent },
-   
+    { path: 'popular-courses', component: PopularCoursesComponent },
+    { path: 'faq', component: FaqComponent},
+    { path: 'courseplans', component: CourseplansComponent},
+    { path: 'subscription-plans', component: SubscriptionPlansComponent},
+    { path: 'subscription-details', component: SubscriptionDetailComponent },
+     
 
 ];
 

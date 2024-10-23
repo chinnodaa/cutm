@@ -1,0 +1,124 @@
+/* Container for the subscription plans */
+.subscription-plans {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: auto; /* Center the container */
+    padding: 40px; /* Padding around the container */
+    text-align: center; /* Center-align text */
+    background-color: #f4f4f4; /* Light grey background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Title for subscription plans */
+.subscription-plans-title {
+    font-size: 2.5rem; /* Large font size */
+    margin-bottom: 30px; /* Margin below the title */
+    color: #333; /* Dark grey color */
+}
+
+/* Flex container for plan cards */
+.plan {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically within each card */
+    justify-content: space-between; /* Space out the content */
+    background-color: #fff; /* White background for each plan */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding for the card */
+    margin: 15px; /* Margin between cards */
+    flex: 1; /* Allow cards to grow */
+    max-width: 300px; /* Max width for each card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+/* Specific colors for each plan */
+.year-plan {
+    background-color: #e0f7fa; /* Light cyan for 1-Year Plan */
+}
+
+.three-month-plan {
+    background-color: #ffe0b2; /* Light orange for 3-Month Plan */
+}
+
+.one-month-plan {
+    background-color: #f1f8e9; /* Light green for 1-Month Plan */
+}
+
+/* Hover effects for plan cards */
+.plan:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+/* Plan titles */
+.plan h3 {
+    font-size: 1.8rem; /* Font size for titles */
+    color: #00796b; /* Dark teal color */
+    margin-bottom: 10px; /* Margin below title */
+}
+
+/* Duration and pricing styles */
+.duration {
+    font-size: 1.2rem; /* Font size for duration */
+    color: #666; /* Grey color */
+}
+
+.price {
+    font-size: 2rem; /* Font size for price */
+    color: #ff5722; /* Bright orange color for price */
+    margin: 15px 0; /* Margin around price */
+}
+
+/* Benefits title styling */
+.benefits {
+    font-weight: bold; /* Bold font */
+    color: #333; /* Dark grey */
+    margin-top: 10px; /* Margin above benefits */
+}
+
+/* List styles for benefits */
+.plan ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Left-align text */
+    margin: 15px 0; /* Margin around the list */
+}
+
+/* List item styles */
+.plan ul li {
+    margin: 5px 0; /* Margin between list items */
+    position: relative; /* Position for pseudo-element */
+    padding-left: 20px; /* Padding for bullet effect */
+}
+
+/* Custom bullet points */
+.plan ul li:before {
+    content: "✔"; /* Checkmark for bullet */
+    color: #4caf50; /* Green color for checkmark */
+    position: absolute; /* Absolute position */
+    left: 0; /* Align bullet to the left */
+}
+
+/* Subscribe button styling */
+.subscribe-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button */
+    font-size: 1.1rem; /* Font size for button */
+}
+
+/* Hover effects for subscribe button */
+.subscribe-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+/* Flex container for plan cards */
+.subscription-plans {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space out the cards evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}

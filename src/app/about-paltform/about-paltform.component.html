@@ -1,24 +1,31 @@
 
 
+
+
 <div class="about-platform">
-    <h2 class="animate">About This Platform</h2>
-    <div class="about-content">
-        <div class="about-text">
-            <p>Welcome to our online learning platform! We offer a variety of courses that cater to different fields and levels of expertise. Our mission is to provide high-quality education accessible to everyone.</p>
-            <p>Join our community of learners and elevate your skills today!</p>
+    <h2  class="animate">About This Platform</h2>
+    
+    <!-- First section with image on the left and text on the right -->
+    <div class="about-section">
+        <div class="about-image">
+            <img src="assets/banners/learning.jpg" alt="Learning" class="image" />
         </div>
-        <div class="about-images">
-            <img src="assets/banners/learning.jpg" alt="Learning" class="image" (click)="toggleImage('learning')" />
-            <img src="assets/banners/Community-Engagement.jpg" alt="Courses" class="image" (click)="toggleImage('Community-Engagement')" />
-            <div *ngIf="activeImage === 'learning'" class="slide-content">
-                <p>Engaging courses designed for practical application.</p>
-            </div>
-            <div *ngIf="activeImage === 'Community-Engagement'" class="slide-content">
-                <p>Interactive sessions with expert instructors.</p>
-            </div>
+        <div class="about-text">
+            <p>Welcome to our online learning platform, where engaging courses are designed for practical application. Whether you're a beginner or an expert, we have something for everyone.</p>
+        </div>
+    </div>
+    
+    <!-- Second section with text on the left and image on the right -->
+    <div class="about-section reverse">
+        <div class="about-text">
+            <p>Our platform provides interactive sessions with expert instructors, offering real-time collaboration and feedback to enhance your learning experience.</p>
+        </div>
+        <div class="about-image">
+            <img src="assets/banners/Community-Engagement.jpg" alt="Courses" class="image" />
         </div>
     </div>
 </div>
+
 
 
 

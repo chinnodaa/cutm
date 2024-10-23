@@ -1,0 +1,23 @@
+<!-- subscription-detail.component.html -->
+<div class="subscription-details-container">
+    <h2 class="subscription-details-title">Subscription Details</h2>
+    
+    <p class="subscription-type">You have selected: <span class="highlight">{{ subscriptionType }}</span></p>
+    
+    <p class="subscription-details-text">
+        Thank you for choosing our {{ subscriptionType }}! Here are the details of your subscription:
+    </p>
+    
+    <ul class="features-list">
+        <li>Access to all courses for the specified duration</li>
+        <li>Exclusive webinars and workshops</li>
+        <li>Priority support from our instructors</li>
+        <li>Certificate of completion for every course</li>
+    </ul>
+    
+    <p class="subscription-details-text">
+        Start your learning journey today and unlock new opportunities!
+    </p>
+    
+    <button class="action-button" (click)="confirmSubscription()">Confirm Subscription</button>
+</div>

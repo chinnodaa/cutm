@@ -28,8 +28,20 @@
                         <li (click)="closeMenu()"> 
                             <a routerLink="/Login" routerLinkActive="active">Login</a>
                         </li>
+                        <li class="profile-icon" (click)="toggleProfileDropdown()">
+                            <img [src]="profileImage" alt="Profile" class="profile-image" />
+                          </li>
                     </ul>
                 </div>
+
+                <!-- Profile Dropdown -->
+        <div class="profile-dropdown" *ngIf="isProfileDropdownOpen">
+            <div class="dropdown-content">
+              <a (click)="navigateToActivities()">My Activities</a>
+              <a (click)="navigateToCertificates()">My Certificates</a>
+              <a (click)="logout()">Logout</a>
+            </div>
+          </div>
             </div>
         </div>
     </div>

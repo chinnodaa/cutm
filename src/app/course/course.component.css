@@ -65,6 +65,53 @@
     height: auto;
     margin-bottom: 20px;
   }
+
+  .carousel-inner {
+    width: 100%;
+    max-height: 500px; /* Set a maximum height for the carousel */
+    overflow: hidden; /* Hide overflow if images are larger */
+}
+
+.carousel-inner img {
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Maintain aspect ratio by scaling height */
+    object-fit: cover; /* Ensure the image covers the container */
+    border-radius: 5px; /* Optional: Add rounded corners to images */
+}
+
+.carousel-caption {
+    position: absolute; /* Position the caption over the image */
+    bottom: 20px; /* Space from the bottom */
+    left: 20px; /* Space from the left */
+    right: 20px; /* Space from the right */
+    text-align: left; /* Align text to the left */
+    color: white; /* Caption text color */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 15px; /* Padding around the caption */
+    border-radius: 5px; /* Rounded corners for the caption */
+}
+
+.enroll-button {
+    background-color: #007bff; /* Button background color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.2s; /* Transition effects */
+    margin-top: 10px; /* Space above the button */
+    display: inline-block; /* Ensure button behaves as an inline element */
+}
+
+.enroll-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+
+  
+  
   
   
   
