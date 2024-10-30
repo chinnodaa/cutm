@@ -42,6 +42,11 @@ import { FaqComponent } from './faq/faq.component';
 import { CourseplansComponent } from './courseplans/courseplans.component';
 import { SubscriptionPlansComponent } from './subscription-plans/subscription-plans.component';
 import { SubscriptionDetailComponent } from './subscription-detail/subscription-detail.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { LessonsComponent } from './lessons/lessons.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { StudentsComponent } from './students/students.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -85,13 +90,19 @@ export const routes: Routes = [
     { path: 'courseplans', component: CourseplansComponent},
     { path: 'subscription-plans', component: SubscriptionPlansComponent},
     { path: 'subscription-details', component: SubscriptionDetailComponent },
-     
+    { path: 'admin-dashboard', component: AdminDashboardComponent, children: [
+        { path: 'courses', component: CourseComponent },
+        { path: 'lessons', component: LessonsComponent },
+        { path: 'assignments', component: AssignmentComponent },
+        { path: 'quizzes', component: QuizzesComponent },
+        { path: 'students', component: StudentsComponent } 
+ ] }
 
 ];
 
 @NgModule({
    
-    imports: [RouterModule.forRoot(routes),CommonModule,BrowserModule, ReactiveFormsModule],
+    imports: [RouterModule.forRoot(routes),CommonModule,BrowserModule, ReactiveFormsModule,HttpClientModule],
     exports: [RouterModule],
   
    

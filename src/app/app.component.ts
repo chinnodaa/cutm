@@ -47,6 +47,6 @@ import { SubscriptionDetailComponent } from './subscription-detail/subscription-
 })
 export class AppComponent {
   title = 'cutm';
-
+ 
 
 }

@@ -4,18 +4,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { HttpClient,  HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule ,RouterModule],
+  imports: [ReactiveFormsModule,CommonModule ,RouterModule,HttpClientModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
 export class SignupComponent implements OnInit{
   signupForm: FormGroup;
-
-  constructor(private fb: FormBuilder, private router: Router) {
+  apiUrl = 'http://localhost:5000/api/signup';
+  constructor(private fb: FormBuilder, private router: Router, private http:HttpClient) {
     // Initialize the form group
     this.signupForm = this.fb.group({
       username: ['', Validators.required],
@@ -35,20 +36,36 @@ export class SignupComponent implements OnInit{
       ? null : { mismatch: true };
   }
 
-  // Function to handle form submission
   onSubmit() {
     if (this.signupForm.valid) {
-      const formData = this.signupForm.value;
-      console.log('Signup Data:', formData);
-
-      // Handle signup logic here (e.g., API call)
-
-      // Redirect to a success page or dashboard after successful signup
-      // For example, navigate to the login page after signup:
-      this.router.navigate(['/Login']);
+      const formData = {
+        username: this.signupForm.value.username,
+        email: this.signupForm.value.email,
+        password: this.signupForm.value.password
+      };
+  
+      // Make HTTP POST request to the backend
+      this.http.post(this.apiUrl, formData).subscribe({
+        next: (response: any) => {
+          console.log('Signup successful', response);
+  
+          // If a token or role is provided in response, store it (optional)
+          if (response.token) {
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('role', response.role);
+          }
+  
+          // Redirect to the login page after successful signup
+          this.router.navigate(['/Login']);
+        },
+        error: (err) => {
+          console.error('Signup failed', err);
+          alert('Signup failed. Please try again.');
+        }
+      });
     } else {
-      // Handle form errors
       console.log('Form is invalid');
+      alert('Please fill out all fields correctly.');
     }
   }
 
