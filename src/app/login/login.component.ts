@@ -34,7 +34,7 @@ export class LoginComponent {
   onSubmit() {
     if (this.loginForm.valid) {
       // Make HTTP POST request to the backend
-      this.http.post(this.apiUrl, {
+      this.http.post('http://localhost:5000/api/login', {
         username: this.loginForm.value.username,
         password: this.loginForm.value.password
       }).subscribe({
@@ -45,7 +45,7 @@ export class LoginComponent {
             localStorage.setItem('token', response.token);
             localStorage.setItem('role', response.role);
             // Redirect to dashboard or another component
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/home']);
           }
         },
         error: (err) => {
