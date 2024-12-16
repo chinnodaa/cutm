@@ -2,7 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, ɵInternalFormsSharedModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { Routes,RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -42,11 +42,21 @@ import { FaqComponent } from './faq/faq.component';
 import { CourseplansComponent } from './courseplans/courseplans.component';
 import { SubscriptionPlansComponent } from './subscription-plans/subscription-plans.component';
 import { SubscriptionDetailComponent } from './subscription-detail/subscription-detail.component';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
-import { LessonsComponent } from './lessons/lessons.component';
-import { QuizzesComponent } from './quizzes/quizzes.component';
-import { StudentsComponent } from './students/students.component';
+
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserModule } from './user/user.module';
+import { MessagesListComponent } from './messages/messages-list/messages-list.component';
+import { MessagesModule } from './messages/messages.module';
+
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { CourseOverviewComponent } from './student-dashboard/course-overview/course-overview.component';
+import { AssignmentsDeadlinesComponent } from './student-dashboard/assignments-deadlines/assignments-deadlines.component';
+import { GradesAnalyticsComponent } from './student-dashboard/grades-analytics/grades-analytics.component';
+import { EnrollmentOptionsComponent } from './student-dashboard/enrollment-options/enrollment-options.component';
+import { MessagesNotificationsComponent } from './student-dashboard/messages-notifications/messages-notifications.component';
+import { StudentDashboardModule } from './student-dashboard/student-dashboard.module';
+
 
 
 
@@ -90,19 +100,35 @@ export const routes: Routes = [
     { path: 'courseplans', component: CourseplansComponent},
     { path: 'subscription-plans', component: SubscriptionPlansComponent},
     { path: 'subscription-details', component: SubscriptionDetailComponent },
-    { path: 'admin-dashboard', component: AdminDashboardComponent, children: [
-        { path: 'courses', component: CourseComponent },
-        { path: 'lessons', component: LessonsComponent },
-        { path: 'assignments', component: AssignmentComponent },
-        { path: 'quizzes', component: QuizzesComponent },
-        { path: 'students', component: StudentsComponent } 
- ] }
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'users', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+    { path: 'courses', loadChildren: () => import('./course/course.module').then(m => m.CourseModule) },
+    { path: 'settings', loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule) },
+    { path: 'messages', loadChildren: () => import('./messages/messages.module').then(m => m.MessagesModule) },
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+     
+
+     {path: 'student-dashboard',
+        component: StudentDashboardComponent,
+        children: [
+          { path: 'student-dashboard/course-overview', component: CourseOverviewComponent },
+          { path: 'student-dashboard/assignments-deadlines', component: AssignmentsDeadlinesComponent },
+          { path: 'student-dashboard/grades-analytics', component: GradesAnalyticsComponent },
+          { path: 'student-dashboard/enrollment-options', component: EnrollmentOptionsComponent },
+          { path: 'student-dashboard/messages-notifications', component: MessagesNotificationsComponent },
+        ],
+      },
+      { path: '**', redirectTo: '/student-dashboard' }, // Wildcard route for a 404 page
+    
+    
+
+
 
 ];
 
 @NgModule({
    
-    imports: [RouterModule.forRoot(routes),CommonModule,BrowserModule, ReactiveFormsModule,HttpClientModule],
+    imports: [RouterModule.forRoot(routes),CommonModule,BrowserModule, ReactiveFormsModule,HttpClientModule,UserModule,MessagesModule,StudentDashboardModule],
     exports: [RouterModule],
   
    

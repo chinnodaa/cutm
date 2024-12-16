@@ -1,0 +1,12 @@
+<h2>Add Assignment</h2>
+<form (ngSubmit)="addAssignment()" #assignmentForm="ngForm">
+  <label for="title">Title:</label>
+  <input type="text" id="title" [(ngModel)]="newAssignment.title" name="title" required />
+
+  <label for="dueDate">Due Date:</label>
+  <input type="date" id="dueDate" [(ngModel)]="newAssignment.dueDate" name="dueDate" required />
+
+  <button type="submit" [disabled]="!assignmentForm.valid">Add Assignment</button>
+</form>
+
+

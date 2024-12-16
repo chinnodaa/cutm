@@ -1,0 +1,9 @@
+<div class="card">
+    <h3>Live Classes</h3>
+    <button (click)="scheduleClass()">Schedule Class</button>
+    <div *ngFor="let class of liveClasses">
+      <div>{{ class.name }}</div>
+      <button (click)="launchClass(class.id)">Launch</button>
+    </div>
+  </div>
+  

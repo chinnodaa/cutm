@@ -1,0 +1,63 @@
+/* Reset default padding and margin for the whole page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6fa; /* Background color for the main dashboard */
+}
+
+
+
+
+/* Dashboard Wrapper */
+.dashboard-wrapper {
+  display: flex;
+  padding-top: 60px; /* Offset for navbar height */
+  padding-bottom: 50px; /* Offset for footer height */
+  min-height: calc(100vh - 110px); /* Fill viewport without extra spaces */
+  background-color: #f5f6fa;
+}
+
+/* Side Navigation */
+.side-nav {
+  width: 250px;
+  background-color: #2f3542;
+  color: #ffffff;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-nav .logo img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.side-nav .nav-list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+}
+
+.side-nav .nav-list li a {
+  display: block;
+  padding: 15px;
+  color: #dfe4ea;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.side-nav .nav-list li a:hover {
+  background-color: #57606f;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f5f6fa;
+}

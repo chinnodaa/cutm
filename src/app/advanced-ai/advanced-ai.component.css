@@ -270,7 +270,6 @@
 
   
   
-  
   .zoom-classes {
     background-color: #f9f9f9; /* Light background color */
     border: 1px solid #ddd; /* Border around the section */
@@ -301,6 +300,13 @@
     margin-bottom: 10px; /* Spacing between list items */
   }
   
+  /* Button links */
+  .zoom-classes .link-wrapper {
+    display: flex;
+    gap: 10px; /* Space between the links */
+    margin-top: 10px; /* Space above the buttons */
+  }
+  
   .zoom-classes a {
     text-decoration: none; /* Remove underline from links */
     color: #007BFF; /* Link color */
@@ -308,6 +314,7 @@
     border: 1px solid #007BFF; /* Border matching link color */
     border-radius: 5px; /* Rounded corners for links */
     transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+    display: inline-block; /* Ensure it behaves like a button */
   }
   
   .zoom-classes a:hover {

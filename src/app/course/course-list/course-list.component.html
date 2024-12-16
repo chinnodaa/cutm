@@ -1,0 +1,9 @@
+<div class="card">
+    <h3>Course Management</h3>
+    <button (click)="addCourse()">Create Course</button>
+    <div *ngFor="let course of courses">
+      <div>{{ course.name }}</div>
+      <button (click)="editCourse(course.id)">Edit</button>
+    </div>
+  </div>
+  

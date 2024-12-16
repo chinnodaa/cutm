@@ -7,11 +7,13 @@ import { FaqComponent } from '../faq/faq.component';
 import { CourseplansComponent } from '../courseplans/courseplans.component';
 import { SubscriptionPlansComponent } from '../subscription-plans/subscription-plans.component';
 import { SubscriptionDetailComponent } from '../subscription-detail/subscription-detail.component';
+import { DashboardComponent } from '../dashboard/dashboard.component';
+import { StudentDashboardComponent } from '../student-dashboard/student-dashboard.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CourseComponent,TopRecruitersComponent,AboutPaltformComponent,PopularCoursesComponent,FaqComponent,CourseplansComponent,SubscriptionPlansComponent,SubscriptionDetailComponent],
+  imports: [CourseComponent,TopRecruitersComponent,AboutPaltformComponent,PopularCoursesComponent,FaqComponent,CourseplansComponent,SubscriptionPlansComponent,SubscriptionDetailComponent,DashboardComponent,StudentDashboardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

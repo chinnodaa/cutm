@@ -45,7 +45,7 @@ export class LoginComponent {
             localStorage.setItem('token', response.token);
             localStorage.setItem('role', response.role);
             // Redirect to dashboard or another component
-            this.router.navigate(['/home']);
+            this.router.navigate(['/Home']);
           }
         },
         error: (err) => {

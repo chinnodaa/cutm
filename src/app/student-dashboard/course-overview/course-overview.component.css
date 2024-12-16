@@ -1,0 +1,25 @@
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .course-card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    
+    h3 {
+      font-size: 1.2em;
+      color: #34495e;
+      margin-bottom: 5px;
+    }
+    
+    p {
+      color: #7f8c8d;
+    }
+  }
+  
+  

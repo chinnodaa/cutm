@@ -1,0 +1,97 @@
+/* General Heading Style */
+h2 {
+    font-size: 1.8em;  /* Increased size for better prominence */
+    font-weight: 600;  /* Slightly heavier font for a professional look */
+    margin-bottom: 15px;
+    color: #2c3e50;  /* Dark, neutral color for professional readability */
+    text-transform: uppercase;  /* Make the heading stand out */
+    letter-spacing: 1px;  /* Slight spacing between letters for modern touch */
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Notification Card Styling */
+  .notification-card {
+    padding: 20px;  /* Increased padding for more space around content */
+    border: 1px solid #ddd;  /* Light border for separation */
+    border-radius: 12px;  /* Rounded corners for a soft look */
+    background-color: #ffffff;  /* White background to make text pop */
+    margin-bottom: 20px;  /* More spacing between notifications */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover effect */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-card:hover {
+    transform: translateY(-5px);  /* Slight upward movement on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
+  }
+  
+  .notification-card p {
+    font-size: 1.1em;  /* Slightly larger text for better readability */
+    color: #7f8c8d;  /* Neutral gray text for description */
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .notification-card strong {
+    color: #8e44ad;  /* Rich purple for emphasis */
+    font-weight: 700;  /* Stronger emphasis for important information */
+  }
+  
+  /* Improved Icons for Notifications */
+  .notification-card i {
+    font-size: 1.2em;
+    margin-right: 10px;  /* Space between icon and text */
+    color: #3498db;  /* Blue for a professional look */
+  }
+  
+  /* Notification Card Button */
+  .notification-card button {
+    background-color: #2980b9;  /* Blue background for the button */
+    color: white;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    align-self: flex-start;  /* Align the button to the left */
+  }
+  
+  .notification-card button:hover {
+    background-color: #1f618d;  /* Darker blue for hover effect */
+  }
+  
+  /* Notification Header */
+  .notification-card .notification-header {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #34495e;  /* Darker color for the header */
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 1.6em;  /* Adjust heading size for smaller screens */
+    }
+  
+    .notification-card {
+      padding: 15px;  /* Less padding on smaller screens */
+      margin-bottom: 15px;  /* Reduced margin for better fitting */
+    }
+  
+    .notification-card p {
+      font-size: 1em;  /* Slightly smaller text on mobile for readability */
+    }
+  
+    .notification-card button {
+      font-size: 12px;  /* Smaller button text on mobile */
+      padding: 6px 12px;  /* Smaller button for mobile */
+    }
+  }
+  

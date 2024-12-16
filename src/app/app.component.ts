@@ -38,10 +38,22 @@ import { CourseplansComponent } from './courseplans/courseplans.component';
 import { SubscriptionPlansComponent } from './subscription-plans/subscription-plans.component';
 import { SubscriptionDetailComponent } from './subscription-detail/subscription-detail.component';
 
+import { StudentsComponent } from './students/students.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MessagesListComponent } from './messages/messages-list/messages-list.component';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { CourseOverviewComponent } from './student-dashboard/course-overview/course-overview.component';
+import { AssignmentsDeadlinesComponent } from './student-dashboard/assignments-deadlines/assignments-deadlines.component';
+import { GradesAnalyticsComponent } from './student-dashboard/grades-analytics/grades-analytics.component';
+import { EnrollmentOptionsComponent } from './student-dashboard/enrollment-options/enrollment-options.component';
+import { MessagesNotificationsComponent } from './student-dashboard/messages-notifications/messages-notifications.component';
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CommonModule,NavbarComponent,LoginComponent,SignupComponent,HomeComponent,ProfileComponent,AboutComponent,ServicesComponent,FooterComponent,CourseComponent,TechologyComponent,BusinessComponent,DesignComponent,AiComponent,DataComponent,WebComponent,CyberComponent,CnComponent,BioComponent,EceComponent,MechanicalComponent,AdvancedAiComponent,DeepLearningComponent,NLPComponent,MachineLearningComponent,DataManagementComponent,VedioComponent,AssignmentComponent,MidtremTestComponent,FinalTestComponent,TopRecruitersComponent,AboutPaltformComponent,PopularCoursesComponent,FaqComponent,CourseplansComponent,SubscriptionPlansComponent,SubscriptionDetailComponent],
+  imports: [RouterOutlet,CommonModule,NavbarComponent,LoginComponent,SignupComponent,HomeComponent,ProfileComponent,AboutComponent,ServicesComponent,FooterComponent,CourseComponent,TechologyComponent,BusinessComponent,DesignComponent,AiComponent,DataComponent,WebComponent,CyberComponent,CnComponent,BioComponent,EceComponent,MechanicalComponent,AdvancedAiComponent,DeepLearningComponent,NLPComponent,MachineLearningComponent,DataManagementComponent,VedioComponent,AssignmentComponent,MidtremTestComponent,FinalTestComponent,TopRecruitersComponent,AboutPaltformComponent,PopularCoursesComponent,FaqComponent,CourseplansComponent,SubscriptionPlansComponent,SubscriptionDetailComponent,StudentsComponent,QuizzesComponent,DashboardComponent,MessagesListComponent,StudentDashboardComponent,CourseOverviewComponent,AssignmentsDeadlinesComponent,GradesAnalyticsComponent,EnrollmentOptionsComponent,MessagesNotificationsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

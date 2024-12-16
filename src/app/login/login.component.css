@@ -115,8 +115,6 @@ form .signup-link a:hover{
 
 
 
-
-/* Fullscreen video background */
 .video-container {
   position: fixed;
   top: 0;
@@ -137,8 +135,9 @@ form .signup-link a:hover{
   height: auto;
   transform: translate(-50%, -50%);
   z-index: -1;
-  background-size: cover;
+  filter: brightness(0.2); /* Adjusted for a darker effect */
 }
+
 
 
 /* Right-hand side section for account creation */
@@ -186,7 +185,7 @@ form .signup-link a:hover{
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Optional: Keep the shadow to create depth */
   font-family: 'Roboto', sans-serif;
   text-align: center;
-  color: white; /* Set all text in the section to white */
+  color: black; /* Set all text in the section to white */
 }
 
 /* Circular image styling */
@@ -209,12 +208,12 @@ form .signup-link a:hover{
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: transparent; /* Transparent input background */
-  color: white; /* Input text color white */
+  color:black; /* Input text color white */
   transition: border-color 0.3s ease;
 }
 
 .login-form input::placeholder {
-  color: rgba(255, 255, 255, 0.7); /* Placeholder text color set to white with transparency */
+  color: black; /* Placeholder text color set to white with transparency */
 }
 
 .login-form input:focus { 
@@ -230,7 +229,7 @@ form .signup-link a:hover{
   border: 1px solid #ddd; /* Normal border */
   border-radius: 5px;
   background-color: transparent; /* Keep the dropdown background transparent */
-  color: white; /* Dropdown text color white */
+  color:black; /* Dropdown text color white */
   appearance: none; /* Remove default arrow */
 }
 
@@ -298,7 +297,7 @@ button:active {
 /* Heading and paragraph text styling */
 .new-account-section h3 {
   margin-bottom: 10px;
-  color: white; /* Change the text color to black */
+  color: black; /* Change the text color to black */
 }
 
 .new-account-section p {

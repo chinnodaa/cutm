@@ -1,0 +1,139 @@
+<div class="dashboard-container">
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+      <div class="branding">Learning Platform</div>
+      <div class="nav-items">
+        <mat-icon>notifications</mat-icon>
+        <span class="profile-menu">Profile</span>
+      </div>
+    </header>
+  
+    <!-- Sidebar and Main Content -->
+    <div class="content-area">
+      <!-- Collapsible Sidebar -->
+      <nav class="sidebar">
+        <button (click)="toggleSidebar()">☰</button>
+        <ul *ngIf="sidebarOpen">
+          <li><a routerLink="/dashboard/overview">Overview</a></li>
+          <li><a routerLink="/dashboard/courses">Courses</a></li>
+          <li><a routerLink="/dashboard/assignments">Assignments</a></li>
+          <li><a routerLink="/dashboard/settings">Settings</a></li>
+        </ul>
+      </nav>
+  
+      <!-- Main Display Area -->
+      <main class="main-display">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </div>
+  
+  <!-- src/app/dashboard/dashboard.component.html -->
+<div class="admin-dashboard">
+
+    <!-- Top Navigation Bar -->
+    <mat-toolbar color="primary">
+      <span>Admin Dashboard</span>
+      <span class="spacer"></span>
+      <mat-icon>notifications</mat-icon>
+      <mat-icon>account_circle</mat-icon>
+    </mat-toolbar>
+  
+    <div class="dashboard-body">
+      <!-- Sidebar -->
+      <mat-nav-list class="sidebar">
+        <a mat-list-item routerLink="/dashboard">Dashboard</a>
+        <a mat-list-item routerLink="/users">Users</a>
+        <a mat-list-item routerLink="/courses">Courses</a>
+        <a mat-list-item routerLink="/settings">Settings</a>
+        <a mat-list-item routerLink="/messages">Messages</a>
+      </mat-nav-list>
+  
+      <!-- Main Content -->
+      <div class="main-content">
+        <div class="card-container">
+          <!-- User & Course Management Card -->
+          <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>User & Course Management</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Manage users and courses quickly and efficiently.</p>
+              <button mat-raised-button color="accent" routerLink="/users">Manage Users</button>
+              <button mat-raised-button color="accent" routerLink="/courses">Manage Courses</button>
+            </mat-card-content>
+          </mat-card>
+  
+          <!-- Analytics & Reports Card -->
+          <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>Analytics & Reports</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="charts">
+                <div class="chart">Chart 1 (Activity)</div>
+                <div class="chart">Chart 2 (Enrollments)</div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+  
+          <!-- System Settings Card -->
+          <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>System Settings</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <button mat-raised-button color="primary" routerLink="/settings">Configure Platform</button>
+            </mat-card-content>
+          </mat-card>
+  
+          <!-- Messaging System Card -->
+          <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>Messaging</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <button mat-raised-button color="warn" routerLink="/messages">Inbox</button>
+            </mat-card-content>
+          </mat-card>
+  
+          <!-- Notifications Card -->
+          <mat-card class="card">
+            <mat-card-header>
+              <mat-card-title>Notifications</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <ul>
+                <li>New course added: Angular Fundamentals</li>
+                <li>High activity period: 50% increase in enrollments</li>
+              </ul>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+  <div class="dashboard-container">
+    <div class="sidebar">
+      <!-- Add Sidebar navigation here -->
+    </div>
+  
+    <div class="main-content">
+      <div class="top-bar">
+        <!-- Add Top Bar with Profile settings, Search, etc -->
+      </div>
+  
+      <div class="dashboard-summary">
+        <app-course-management></app-course-management>
+        <app-student-progress></app-student-progress>
+        <app-assignment-review></app-assignment-review>
+        <app-live-classes></app-live-classes>
+        <app-messages-list></app-messages-list>
+      </div>
+    </div>
+  </div>
+  

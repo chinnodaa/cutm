@@ -18,31 +18,31 @@ export class AdvancedAiComponent {
 
   syllabus = [
     {
-      title: 'Introduction to Advanced AI and Machine Learning',
+      title: 'MODULE:1 Introduction to Advanced AI and Machine Learning',
       description: 'This section provides an in-depth understanding of AI foundations, including machine learning principles, neural networks, and advanced algorithms used in AI-driven systems.'
     },
     {
-      title: 'Deep Learning and Neural Networks',
+      title: 'MODULE:2 Deep Learning and Neural Networks',
       description: 'Covers various types of neural networks, including convolutional and recurrent neural networks, along with practical examples.'
     },
     {
-      title: 'Natural Language Processing (NLP)',
+      title: 'MODULE:3 Natural Language Processing (NLP)',
       description: 'Explores techniques for teaching machines to understand and generate human language.'
     },
     {
-      title: 'Reinforcement Learning',
+      title: 'MODULE:4 Reinforcement Learning',
       description: 'Teaches the fundamentals of reinforcement learning algorithms, like Q-learning, and their applications in AI.'
     },
     {
-      title: 'Generative Adversarial Networks (GANs)',
+      title: 'MODULE:5 Generative Adversarial Networks (GANs)',
       description: 'Provides an understanding of GANs, a class of machine learning frameworks, and their real-world applications in AI.'
     },
     {
-      title: 'AI Ethics and Fairness',
+      title: 'MODULE:6 AI Ethics and Fairness',
       description: 'Discusses ethical implications of AI, including fairness, bias, and the moral responsibility of AI developers.'
     },
     {
-      title: 'Capstone Project: Building an AI Application',
+      title: 'MODULE:7 Capstone Project: Building an AI Application',
       description: 'A hands-on project where students build a functional AI application from scratch.'
     }
   ];

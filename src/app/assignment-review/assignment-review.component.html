@@ -1,0 +1,8 @@
+<div class="card">
+    <h3>Assignment Review</h3>
+    <div *ngFor="let assignment of assignments">
+      <div>{{ assignment.title }}</div>
+      <button (click)="reviewAssignment(assignment.id)">Review</button>
+    </div>
+  </div>
+  
